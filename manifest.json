@@ -1,0 +1,26 @@
+{
+  "name": "lxmusic-batch-downloader",
+  "version": "1.0.0",
+  "description": "大批量按歌单下载无损歌曲+歌词的自动化工具包。将「歌名+歌手」清单批量变成电脑里的 FLAC/MP3 + .lrc 歌词文件。",
+  "author": "AI Agent Team",
+  "license": "MIT",
+  "tags": ["music", "batch-download", "flac", "lrc", "lx-music", "car-audio"],
+  "platforms": ["windows", "python3.11+"],
+  "dependencies": {
+    "system": ["Python >= 3.11", "洛雪音乐助手 PC Windows 版（必需）", "requests 库"],
+    "optional": ["pypinyin（中文拼音排序）"]
+  },
+  "files": {
+    "SKILL.md": "主说明文档（用户+AI双视角）",
+    "README.md": "安装配置详细说明",
+    "lxmusic_batch_downloader.py": "核心可运行脚本",
+    "test_songs.txt": "测试用例清单（5首覆盖各类型）",
+    "import_skill.sh": "一键导入到 .agents/skills 的脚本",
+    "manifest.json": "本文件（包元数据）"
+  },
+  "skill_path": ".agents/skills/lxmusic-batch-downloader",
+  "entry_point": "python lxmusic_batch_downloader.py [options]",
+  "category": "audio/music-toolkit",
+  "difficulty": "medium",
+  "estimated_time": "5-10 分钟初始设置 + 下载时长取决于歌曲数量"
+}
